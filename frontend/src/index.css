@@ -19,7 +19,7 @@ header a {
 }
 
 main {
-  padding: 1rem;
+  padding-left: 1rem;
 }
 
 .products {
@@ -29,7 +29,7 @@ main {
 }
 
 .product {
-  border: 1px #404040 solid;
+  border: 2px #a2ccf6 solid;
   margin: 0.8rem;
 }
 
