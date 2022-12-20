@@ -3,12 +3,14 @@ import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+
 import Container from 'react-bootstrap/Container';
 import { LinkContainer } from 'react-router-bootstrap';
 import Badge from 'react-bootstrap/esm/Badge';
 import { Store } from './Store';
 import { useContext } from 'react';
 import CartScreen from './screens/CartScreen';
+import SigninScreen from './screens/SigninScreen';
 function App() {
   const { state } = useContext(Store);
   const { cart } = state;
@@ -16,7 +18,7 @@ function App() {
     <BrowserRouter>
       <div className="d-flex flex-column site-container">
         <header>
-          <Navbar bg="dark" variant="dark">
+          <Navbar bg="dark" variant="dark" class=" navbar navbar-expand-lg ">
             <Container>
               <LinkContainer to="/">
                 <Navbar.Brand>SHOPPING</Navbar.Brand>
@@ -39,6 +41,7 @@ function App() {
             <Routes>
               <Route path="/product/:slug" element={<ProductScreen />} />
               <Route path="/cart" element={<CartScreen />} />
+              <Route path="/Signin" element={<SigninScreen />} />
               <Route path="/" element={<HomeScreen />} />
             </Routes>
           </Container>

@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 import Rating from './Rating';
 import axios from 'axios';
 import { useContext } from 'react';
@@ -27,6 +27,7 @@ function Product(props) {
       payload: { ...item, quantity },
     });
   };
+
   return (
     <Card>
       <Link to={`/product/${product.slug}`}>
@@ -40,14 +41,13 @@ function Product(props) {
         <Card.Text>${product.price}</Card.Text>
         {product.countInStock === 0 ? (
           <Button variant="light" disabled>
-            Out Of Stock{' '}
+            Out of stock
           </Button>
         ) : (
-          <Button onClick={() => addToCartHandler(product)}>Add To Cart</Button>
+          <Button onClick={() => addToCartHandler(product)}>Add to cart</Button>
         )}
       </Card.Body>
     </Card>
   );
 }
-
 export default Product;
