@@ -1,7 +1,23 @@
+import bcrypt from 'bcryptjs';
+
 const data = {
+  users: [
+    {
+      name: 'avi',
+      email: 'admin@example.com',
+      password: bcrypt.hashSync('123456'),
+      isAdmin: true,
+    },
+    {
+      name: 'avyukth',
+      email: 'a@example.com',
+      password: bcrypt.hashSync('123456'),
+      isAdmin: false,
+    },
+  ],
   products: [
     {
-      _id: '1',
+      //_id: '1',
       name: 'baby frock',
       slug: 'baby-frock',
       category: 'frocks',
@@ -14,7 +30,7 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '2',
+      // _id: '2',
       name: 'white floral print frock',
       slug: 'white-floral-print-frock',
       category: 'frocks',
@@ -27,7 +43,7 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '3',
+      //_id: '3',
       name: 'full white frock',
       slug: 'full-white-frock',
       category: 'frocks',
@@ -40,7 +56,7 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '4',
+      //_id: '4',
       name: 'green jacket',
       slug: 'green-jacket',
       category: 'jackets',
