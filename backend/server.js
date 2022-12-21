@@ -2,6 +2,8 @@ import express from 'express';
 import data from './data.js';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import seedRouter from './routes/sededRouter.js';
+import productRouter from './routes/productRouter.js';
 
 const app = express();
 
@@ -9,13 +11,16 @@ dotenv.config();
 
 mongoose.set('strictQuery', false);
 mongoose
-  .connect(process.env.MONGODB_URI)
+  .connect('mongodb://127.0.0.1:27017')
   .then(() => {
-    console.log('connected to db');
+    console.log('connected to database');
   })
   .catch((err) => {
     console.log(err.message);
   });
+
+app.use('/api/seed', seedRouter);
+app.use('/api/products', productRouter);
 
 app.get('/api/products', (req, res) => {
   res.send(data.products);
