@@ -8,6 +8,17 @@ import userRouter from './routes/userRoutes.js';
 
 dotenv.config();
 
+mongoose.set('strictQuery', false);
+
+mongoose
+  .connect('mongodb://127.0.0.1:27017')
+  .then(() => {
+    console.log('connected to database');
+  })
+  .catch((err) => {
+    console.log(err.message);
+  });
+
 const app = express();
 
 app.use(express.json());
@@ -21,18 +32,7 @@ app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
 });
 
-mongoose.set('strictQuery', false);
-
 const port = process.env.PORT || 5000;
-
-mongoose
-  .connect('mongodb://127.0.0.1:27017')
-  .then(() => {
-    console.log('connected to database');
-  })
-  .catch((err) => {
-    console.log(err.message);
-  });
 
 app.listen(port, () => {
   console.log(`server at http://localhost:${port}`);
