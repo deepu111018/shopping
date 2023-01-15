@@ -26,6 +26,7 @@ export default function ShippingAddressScreen() {
     }
   }, [userInfo, navigate]);
   const [country, setCountry] = useState(shippingAddress.country || '');
+
   const submitHandler = (e) => {
     e.preventDefault();
     ctxDispatch({
