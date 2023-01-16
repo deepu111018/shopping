@@ -90,7 +90,8 @@ orderRouter.get(
     const orders = await Order.find({ user: req.user._id });
     res.send(orders);
   })
-);
+);*/
+}
 
 orderRouter.get(
   '/:id',
@@ -105,7 +106,8 @@ orderRouter.get(
   })
 );
 
-orderRouter.put(
+{
+  /*orderRouter.put(
   '/:id/deliver',
   isAuth,
   expressAsyncHandler(async (req, res) => {
