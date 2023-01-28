@@ -1,0 +1,26 @@
+{
+  "name": "shopping",
+  "version": "1.0.0",
+  "description": "0. Install Tools\r 1. Create React App\r 2. Create Git Repository\r 3. List Products\r    1.create products array\r    2.add product images\r    3.render products\r    4.style products\r 4. Add Routing\r    1.npm i react-router-dom\r    2.create route for home screen\r    3.create router for product screen\r 5. Create Node.JS Server\r    1.run npm init in root folder\r    2.Update package.json set type: module\r    3.Add .js to imports\r    4.npm install express\r    5.create server.js\r    6.add start command as node backend/server.js\r    7.require express\r    8.create route for / return backend is ready.\r    9.move products.js from frontend to backend\r    10.create route for /api/products\r    11.return products\r    12.run npm start\r 6. Fetch Products From Backend\r    1.set proxy in package.json\r    2.npm install axios\r    3.use state hook\r    4.use effect hook\r    5.use reducer hook\r 7. Manage State By Reducer Hook\r    1.define reducer\r    2.update fetch data\r    3.get state from usReducer\r 8. Add bootstrap UI Framework\r    1.npm install react-bootstrap bootstrap\r    2.update App.js\r 9. Create Product and Rating Component\r    1.create Rating component\r    2.Create Product component\r    3.Use Rating component in Product component\r 10. Create Product Details Screen\r     1.fetch product from backend\r     2.create 3 columns for image, info and action\r 11. Create Loading and Message Component\r     create loading component\r     use spinner component\r     craete message component\r     create utils.js to define getError fuction\r 12. Implement Add To Cart\r     1.create react context\r     2.define reducer\r     3.create store provider\r     4.implement add to cart button click handler\r 13. Complete Add To Cart\r     1.check exist item in the cart\r     2.check count in stock in backend\r 14. Create Cart Screen\r     1.create 2 columns\r     2.display items list\r     3.create action column\r 15. Complete Cart Screen\r     1.click handler for inc/dec item\r     2.click handler for remove item\r     3.click handler for checkout\r 16. Create Signin Screen\r     1.create sign in form\r     2.add email and password\r     3.add signin button\r 17. Connect To MongoDB Database\r     1.create atlas monogodb database\r     2.install local mongodb database\r     3.npm install mongoose\r     4.connect to mongodb database\r 18. Seed Sample Products\r     1.create Product model\r     2.create seed route\r     3.use route in server.js\r     4.seed sample product\r 19. Seed Sample Users\r     1.create user model\r     2.seed sample users\r 20. Create Signin Backend API\r     1.create signin api\r     2.npm install jsonwebtoken\r     3.define generateToken\r 21. Complete Signin Screen\r     1.handle submit action\r     2.save token in store and local storage\r     3.show user name in header\r 22. Create Shipping Screen\r     1.create form inputs\r     2.handle save shipping address\r     3.add checkout wizard bar\r 23. Create Sign Up Screen\r     1.create input forms\r     2.handle submit\r     3.create backend api\r 24. Implement Select Payment Method Screen\r     1.create input forms\r     2.handle submit\r 25. Create Place Order Screen\r     1.show cart items, payment and address\r     2.handle place order action\r     3.create order create api\r 26. Implement Place Order Action\r     1.handle place order action\r     2.create oder and create api\r 27. Create Order Screen\r     1.create backend api for order/:id\r     2.fetch order api in frontend\r     3.show order information in 2 cloumns\r 28. Pay Order By PayPal\r     1.generate paypal client id\r     2.create api to return client id\r     3.install react-paypal-js\r     4.use PayPalScriptProvider in index.js\r     5.use usePayPalScriptReducer in Order Screen\r     6.implement loadPaypalScript function\r     7.render paypal button\r     8.implement onApprove payment function\r     9.create pay order api in backend",
+  "main": "index.js",
+  "dependencies": {
+    "init": "^0.1.2",
+    "daemon": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "cd backend && npm install  && cd ../frontend && npm install && npm run build",
+    "start": "node backend/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepu111018/shopping.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deepu111018/shopping/issues"
+  },
+  "homepage": "https://github.com/deepu111018/shopping#readme"
+}

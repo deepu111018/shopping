@@ -9,7 +9,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import Rating from '../components/Rating';
 import Button from 'react-bootstrap/esm/Button';
 import { Helmet } from 'react-helmet-async';
-import LoadingBox from '../components/loadingBox';
+import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { getError } from '../utility';
 import { Store } from '../Store';
@@ -95,7 +95,7 @@ const ProductScreen = () => {
                 numReviews={product.numReviews}
               ></Rating>
             </ListGroup.Item>
-            <ListGroup.Item>price : ${product.price}</ListGroup.Item>
+            <ListGroup.Item>price : ₹{product.price}</ListGroup.Item>
             <ListGroup.Item>
               Description:
               <p>{product.description}</p>
@@ -109,7 +109,7 @@ const ProductScreen = () => {
                 <ListGroup.Item>
                   <Row>
                     <Col>Price:</Col>
-                    <Col>${product.price}</Col>
+                    <Col>₹{product.price}</Col>
                   </Row>
                 </ListGroup.Item>
                 <ListGroup.Item>

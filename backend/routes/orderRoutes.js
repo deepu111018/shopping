@@ -121,7 +121,8 @@ orderRouter.get(
       res.status(404).send({ message: 'Order Not Found' });
     }
   })
-);
+);*/
+}
 
 orderRouter.put(
   '/:id/pay',
@@ -142,7 +143,8 @@ orderRouter.put(
       };
 
       const updatedOrder = await order.save();
-      mailgun()
+      {
+        /* mailgun()
         .messages()
         .send(
           {
@@ -158,7 +160,8 @@ orderRouter.put(
               console.log(body);
             }
           }
-        );
+        );*/
+      }
 
       res.send({ message: 'Order Paid', order: updatedOrder });
     } else {
@@ -167,7 +170,8 @@ orderRouter.put(
   })
 );
 
-orderRouter.delete(
+{
+  /*orderRouter.delete(
   '/:id',
   isAuth,
   isAdmin,

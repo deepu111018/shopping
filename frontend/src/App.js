@@ -75,25 +75,32 @@ function App() {
                   </Link>
                 )}
               </Nav>
+              <Navbar.Brand>
+                Deepika a Full Stack React Software Developer with 4+ Years of
+                Experiance
+              </Navbar.Brand>
             </Container>
           </Navbar>
         </header>
         <main>
-          <Container className="mt-3">
+          <Container className="mt-0">
             <Routes>
               <Route path="/product/:slug" element={<ProductScreen />} />
               <Route path="/cart" element={<CartScreen />} />
               <Route path="/signin" element={<SigninScreen />} />
               <Route path="/signup" element={<SignupScreen />} />
               <Route path="/placeorder" element={<PlaceOrderScreen />} />
-              <Route path="/order" element={<OrderScreen />} />
+              <Route path="/order/:id" element={<OrderScreen />} />
               <Route path="/shipping" element={<ShippingAddressScreen />} />
               <Route path="/payment" element={<PaymentMethodScreen />} />
               <Route path="/" element={<HomeScreen />} />
             </Routes>
           </Container>
         </main>
-        <footer className="text-center">All Rights Reserved</footer>
+
+        <footer className=" footer-copyright-wrapper text-center">
+          <p>&copy;Copyright by Deepika Thum</p>
+        </footer>
       </div>
     </BrowserRouter>
   );
